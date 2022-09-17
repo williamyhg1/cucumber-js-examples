@@ -1,5 +1,12 @@
-export class Greeter {
-    sayHello() {
-        return "hello";
+// export class Greeter {
+//     sayHello() {
+//         return "yes";
+//     }
+// }
+
+
+export class Emotion {
+    cry() {
+        return "tear";
     }
 }
