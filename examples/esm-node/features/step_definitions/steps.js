@@ -1,6 +1,6 @@
 import assert from "assert";
 import { When, Then } from "@cucumber/cucumber";
-import { Emotion } from "../../src/index.js";
+import { Auth } from "../../src/index.js";
 
 // When("the greeter says hello", function () {
 //   this.whatIHeard = new Greeter().sayHello();
@@ -16,12 +16,11 @@ import { Emotion } from "../../src/index.js";
 
 
 
-When("the user cries out", function () {
-  const feelings = new Emotion();
-  this.whatISaw = feelings.cry();
+When("the user logs in", function () {
+  const feature = new Auth();
+  this.result = feature.login();
 });
 
 Then("the screen displays {string}", function (expected) {
-  assert.equal(this.whatISaw, expected);
-  console.log("what I Saw is "+JSON.stringify(expected)+ `and this.whatIsaw is ${this.whatISaw} `)
+  assert.equal(this.result, expected);
 });

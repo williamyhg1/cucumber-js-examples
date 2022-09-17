@@ -5,8 +5,8 @@
 // }
 
 
-export class Emotion {
-    cry() {
-        return "tear";
+export class Auth {
+    login() {
+        return "you have logged in";
     }
 }
